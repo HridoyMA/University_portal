@@ -74,7 +74,7 @@ public class login extends javax.swing.JFrame {
                 user_txtFocusLost(evt);
             }
         });
-        getContentPane().add(user_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 340, 40));
+        getContentPane().add(user_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, 350, 40));
 
         pass_txt.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         pass_txt.setText("Enter Password");
@@ -86,7 +86,12 @@ public class login extends javax.swing.JFrame {
                 pass_txtFocusLost(evt);
             }
         });
-        getContentPane().add(pass_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 360, 340, 40));
+        pass_txt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pass_txtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(pass_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, 350, 40));
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/login.png"))); // NOI18N
@@ -96,7 +101,7 @@ public class login extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 430, -1, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 430, -1, -1));
 
         jCheckBox1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jCheckBox1.setText("Show Password");
@@ -105,7 +110,7 @@ public class login extends javax.swing.JFrame {
                 jCheckBox1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 430, 150, 30));
+        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 430, 150, 30));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/University-Portal.png"))); // NOI18N
         jLabel3.setText("jLabel3");
@@ -117,7 +122,7 @@ public class login extends javax.swing.JFrame {
     private void user_txtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_user_txtFocusGained
         // TODO add your handling code here:
         error_lbl.setVisible(false);
-        if(user_txt.getText().equals("Enter username"))
+        if(user_txt.getText().equals("Enter Username"))
         {
             user_txt.setText("");
             user_txt.setForeground(new Color(0,118,221));
@@ -126,7 +131,7 @@ public class login extends javax.swing.JFrame {
 
     private void user_txtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_user_txtFocusLost
         // TODO add your handling code here:
-                error_lbl.setVisible(false);
+        error_lbl.setVisible(false);
         if(user_txt.getText().equals(""))
         {
             user_txt.setText("Enter Username");
@@ -136,8 +141,8 @@ public class login extends javax.swing.JFrame {
 
     private void pass_txtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pass_txtFocusGained
         // TODO add your handling code here:
-                error_lbl.setVisible(false);
-        if(pass_txt.getText().equals("Enter username"))
+        error_lbl.setVisible(false);
+        if(pass_txt.getText().equals("Enter Password"))
         {
             pass_txt.setText("");
             pass_txt.setForeground(new Color(0,118,221));
@@ -146,10 +151,10 @@ public class login extends javax.swing.JFrame {
 
     private void pass_txtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pass_txtFocusLost
         // TODO add your handling code here:
-                        error_lbl.setVisible(false);
+        error_lbl.setVisible(false);
         if(pass_txt.getText().equals(""))
         {
-            pass_txt.setText("Enter password");
+            pass_txt.setText("Enter Password");
             pass_txt.setForeground(new Color(0,118,221));
         }
     }//GEN-LAST:event_pass_txtFocusLost
@@ -185,6 +190,10 @@ public class login extends javax.swing.JFrame {
             pass_txt.setEchoChar('*');
         }
     }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void pass_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pass_txtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pass_txtActionPerformed
 
     /**
      * @param args the command line arguments
