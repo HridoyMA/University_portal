@@ -85,14 +85,14 @@ public class home extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(0, 153, 153));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/dashboard.png"))); // NOI18N
-        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 30, 40));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/teaching.png"))); // NOI18N
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 40, 40));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Teacher");
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 130, 20));
 
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 210, 40));
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 210, 40));
 
         jPanel5.setBackground(new java.awt.Color(0, 153, 153));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -202,7 +202,7 @@ public class home extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("SimSun", 1, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 32, 63));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("Results");
+        jLabel17.setText("Fees & Waiver");
 
         javax.swing.GroupLayout FeesWaiversLayout = new javax.swing.GroupLayout(FeesWaivers);
         FeesWaivers.setLayout(FeesWaiversLayout);
