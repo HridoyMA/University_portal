@@ -55,6 +55,8 @@ public class home extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         centrePanel = new javax.swing.JPanel();
+        cover = new javax.swing.JPanel();
+        jLabel45 = new javax.swing.JLabel();
         SignUp = new javax.swing.JPanel();
         signup_name = new javax.swing.JTextField();
         signup_email = new javax.swing.JTextField();
@@ -85,6 +87,12 @@ public class home extends javax.swing.JFrame {
         FeesWaivers = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
+        routine = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        student_notice = new javax.swing.JPanel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
         TeacherPanel = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
@@ -94,9 +102,15 @@ public class home extends javax.swing.JFrame {
         AddResult = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        Salary = new javax.swing.JPanel();
+        attendance = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
+        routine1 = new javax.swing.JPanel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        notice = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
         AdminPanel = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
@@ -109,6 +123,9 @@ public class home extends javax.swing.JFrame {
         UpdatelDataPanel = new javax.swing.JPanel();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
+        update_notice = new javax.swing.JPanel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -119,6 +136,11 @@ public class home extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         sidebar_panel.setBackground(new java.awt.Color(0, 153, 153));
+        sidebar_panel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sidebar_panelMouseClicked(evt);
+            }
+        });
         sidebar_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -197,6 +219,26 @@ public class home extends javax.swing.JFrame {
         jPanel1.add(sidebar_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 85, 210, 540));
 
         centrePanel.setLayout(new java.awt.CardLayout());
+
+        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/cover.png"))); // NOI18N
+        jLabel45.setPreferredSize(new java.awt.Dimension(790, 540));
+
+        javax.swing.GroupLayout coverLayout = new javax.swing.GroupLayout(cover);
+        cover.setLayout(coverLayout);
+        coverLayout.setHorizontalGroup(
+            coverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(coverLayout.createSequentialGroup()
+                .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        coverLayout.setVerticalGroup(
+            coverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(coverLayout.createSequentialGroup()
+                .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        centrePanel.add(cover, "card7");
 
         SignUp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -450,6 +492,70 @@ public class home extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        routine.setBackground(new java.awt.Color(173, 239, 209));
+        routine.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        routine.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/routine.png"))); // NOI18N
+
+        jLabel36.setFont(new java.awt.Font("SimSun", 1, 14)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(0, 32, 63));
+        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel36.setText("Routine");
+
+        javax.swing.GroupLayout routineLayout = new javax.swing.GroupLayout(routine);
+        routine.setLayout(routineLayout);
+        routineLayout.setHorizontalGroup(
+            routineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+            .addGroup(routineLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        routineLayout.setVerticalGroup(
+            routineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(routineLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel36)
+                .addContainerGap())
+        );
+
+        student_notice.setBackground(new java.awt.Color(173, 239, 209));
+        student_notice.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        student_notice.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/notice.png"))); // NOI18N
+
+        jLabel42.setFont(new java.awt.Font("SimSun", 1, 14)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(0, 32, 63));
+        jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel42.setText("Notice");
+
+        javax.swing.GroupLayout student_noticeLayout = new javax.swing.GroupLayout(student_notice);
+        student_notice.setLayout(student_noticeLayout);
+        student_noticeLayout.setHorizontalGroup(
+            student_noticeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel42, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+            .addGroup(student_noticeLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        student_noticeLayout.setVerticalGroup(
+            student_noticeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(student_noticeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel42)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout StudentPanelLayout = new javax.swing.GroupLayout(StudentPanel);
         StudentPanel.setLayout(StudentPanelLayout);
         StudentPanelLayout.setHorizontalGroup(
@@ -461,13 +567,19 @@ public class home extends javax.swing.JFrame {
             .addGroup(StudentPanelLayout.createSequentialGroup()
                 .addGap(99, 99, 99)
                 .addGroup(StudentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(StudentPanelLayout.createSequentialGroup()
-                        .addComponent(PresentCourse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Results, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StudentPanelLayout.createSequentialGroup()
+                        .addGroup(StudentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(StudentPanelLayout.createSequentialGroup()
+                                .addComponent(routine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(student_notice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(StudentPanelLayout.createSequentialGroup()
+                                .addComponent(PresentCourse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Results, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(104, 104, 104)
-                        .addComponent(FeesWaivers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(FeesWaivers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(75, Short.MAX_VALUE))
         );
         StudentPanelLayout.setVerticalGroup(
@@ -484,7 +596,11 @@ public class home extends javax.swing.JFrame {
                         .addGroup(StudentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(PresentCourse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Results, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(299, Short.MAX_VALUE))
+                .addGap(69, 69, 69)
+                .addGroup(StudentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(routine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(student_notice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
 
         centrePanel.add(StudentPanel, "card2");
@@ -558,35 +674,99 @@ public class home extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        Salary.setBackground(new java.awt.Color(242, 237, 215));
-        Salary.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        Salary.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        attendance.setBackground(new java.awt.Color(242, 237, 215));
+        attendance.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        attendance.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/salary.png"))); // NOI18N
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/attendance.png"))); // NOI18N
 
         jLabel26.setFont(new java.awt.Font("SimSun", 1, 14)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(117, 81, 57));
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel26.setText("Salary");
+        jLabel26.setText("Attendance");
 
-        javax.swing.GroupLayout SalaryLayout = new javax.swing.GroupLayout(Salary);
-        Salary.setLayout(SalaryLayout);
-        SalaryLayout.setHorizontalGroup(
-            SalaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout attendanceLayout = new javax.swing.GroupLayout(attendance);
+        attendance.setLayout(attendanceLayout);
+        attendanceLayout.setHorizontalGroup(
+            attendanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
-            .addGroup(SalaryLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
+            .addGroup(attendanceLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        SalaryLayout.setVerticalGroup(
-            SalaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SalaryLayout.createSequentialGroup()
+        attendanceLayout.setVerticalGroup(
+            attendanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(attendanceLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel26)
+                .addContainerGap())
+        );
+
+        routine1.setBackground(new java.awt.Color(242, 237, 215));
+        routine1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        routine1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/routine.png"))); // NOI18N
+
+        jLabel38.setFont(new java.awt.Font("SimSun", 1, 14)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(117, 81, 57));
+        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel38.setText("Routine");
+
+        javax.swing.GroupLayout routine1Layout = new javax.swing.GroupLayout(routine1);
+        routine1.setLayout(routine1Layout);
+        routine1Layout.setHorizontalGroup(
+            routine1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel38, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+            .addGroup(routine1Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        routine1Layout.setVerticalGroup(
+            routine1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(routine1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel38)
+                .addContainerGap())
+        );
+
+        notice.setBackground(new java.awt.Color(242, 237, 215));
+        notice.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        notice.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/notice.png"))); // NOI18N
+
+        jLabel40.setFont(new java.awt.Font("SimSun", 1, 14)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(117, 81, 57));
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel40.setText("Notice");
+
+        javax.swing.GroupLayout noticeLayout = new javax.swing.GroupLayout(notice);
+        notice.setLayout(noticeLayout);
+        noticeLayout.setHorizontalGroup(
+            noticeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel40, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+            .addGroup(noticeLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        noticeLayout.setVerticalGroup(
+            noticeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(noticeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel40)
                 .addContainerGap())
         );
 
@@ -604,11 +784,17 @@ public class home extends javax.swing.JFrame {
                 .addContainerGap(109, Short.MAX_VALUE))
             .addGroup(TeacherPanelLayout.createSequentialGroup()
                 .addGap(80, 80, 80)
-                .addComponent(PresentCourse2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(AddResult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(TeacherPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(TeacherPanelLayout.createSequentialGroup()
+                        .addComponent(routine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(notice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(TeacherPanelLayout.createSequentialGroup()
+                        .addComponent(PresentCourse2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AddResult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(118, 118, 118)
-                .addComponent(Salary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(attendance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(62, 62, 62))
         );
         TeacherPanelLayout.setVerticalGroup(
@@ -616,7 +802,7 @@ public class home extends javax.swing.JFrame {
             .addGroup(TeacherPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(TeacherPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Salary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(attendance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(TeacherPanelLayout.createSequentialGroup()
                         .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -625,7 +811,11 @@ public class home extends javax.swing.JFrame {
                         .addGroup(TeacherPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(PresentCourse2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AddResult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(305, Short.MAX_VALUE))
+                .addGap(83, 83, 83)
+                .addGroup(TeacherPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(routine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(notice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         centrePanel.add(TeacherPanel, "card3");
@@ -729,6 +919,37 @@ public class home extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        update_notice.setBackground(new java.awt.Color(211, 208, 203));
+        update_notice.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        update_notice.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/notice.png"))); // NOI18N
+
+        jLabel44.setFont(new java.awt.Font("SimSun", 1, 14)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(46, 82, 102));
+        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel44.setText("Update Notice");
+
+        javax.swing.GroupLayout update_noticeLayout = new javax.swing.GroupLayout(update_notice);
+        update_notice.setLayout(update_noticeLayout);
+        update_noticeLayout.setHorizontalGroup(
+            update_noticeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, update_noticeLayout.createSequentialGroup()
+                .addContainerGap(26, Short.MAX_VALUE)
+                .addComponent(jLabel43)
+                .addGap(24, 24, 24))
+            .addComponent(jLabel44, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        update_noticeLayout.setVerticalGroup(
+            update_noticeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(update_noticeLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel44)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout AdminPanelLayout = new javax.swing.GroupLayout(AdminPanel);
         AdminPanel.setLayout(AdminPanelLayout);
         AdminPanelLayout.setHorizontalGroup(
@@ -739,14 +960,16 @@ public class home extends javax.swing.JFrame {
                 .addGap(278, 278, 278))
             .addGroup(AdminPanelLayout.createSequentialGroup()
                 .addGap(101, 101, 101)
-                .addGroup(AdminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(AdminPanelLayout.createSequentialGroup()
-                        .addComponent(AddStudentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(128, 128, 128)
-                        .addComponent(AddTeacherPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(UpdatelDataPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(AdminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(update_notice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(AdminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(AdminPanelLayout.createSequentialGroup()
+                            .addComponent(AddStudentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(128, 128, 128)
+                            .addComponent(AddTeacherPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(UpdatelDataPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(89, Short.MAX_VALUE))
         );
         AdminPanelLayout.setVerticalGroup(
@@ -763,7 +986,9 @@ public class home extends javax.swing.JFrame {
                         .addGroup(AdminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(AddStudentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AddTeacherPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(316, Short.MAX_VALUE))
+                .addGap(89, 89, 89)
+                .addComponent(update_notice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         centrePanel.add(AdminPanel, "card4");
@@ -876,6 +1101,7 @@ String s;
             TeacherPanel.setVisible(false);
             StudentPanel.setVisible(false);
             AdminPanel.setVisible(false);
+            cover.setVisible(false);
         }
         else
         {
@@ -884,6 +1110,7 @@ String s;
         SignUp.setVisible(false);
         TeacherPanel.setVisible(false);
         StudentPanel.setVisible(false);
+        cover.setVisible(false);
         }
 
     }//GEN-LAST:event_sidebar_adminMouseClicked
@@ -902,6 +1129,7 @@ String s;
             TeacherPanel.setVisible(false);
             StudentPanel.setVisible(false);
             AdminPanel.setVisible(false);
+            cover.setVisible(false);
         }
         else
         {
@@ -910,6 +1138,7 @@ String s;
             TeacherPanel.setVisible(false);
             StudentPanel.setVisible(true);
             AdminPanel.setVisible(false);
+            cover.setVisible(false);
         }
 
     }//GEN-LAST:event_sidebar_studentMouseClicked
@@ -928,6 +1157,7 @@ String s;
             TeacherPanel.setVisible(false);
             StudentPanel.setVisible(false);
             AdminPanel.setVisible(false);
+            cover.setVisible(false);
         }
         else
         {
@@ -936,6 +1166,7 @@ String s;
         TeacherPanel.setVisible(true);
         StudentPanel.setVisible(false);
         AdminPanel.setVisible(false);
+        cover.setVisible(false);
         }
 
     }//GEN-LAST:event_sidebar_teacherMouseClicked
@@ -1049,6 +1280,14 @@ String s;
         }
     }//GEN-LAST:event_signup_pass_checkActionPerformed
 
+    private void sidebar_panelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sidebar_panelMouseClicked
+        // TODO add your handling code here:
+        cover.setVisible(true);
+        onLeaveClick(sidebar_admin);
+        onLeaveClick(sidebar_student);
+        onLeaveClick(sidebar_teacher);
+    }//GEN-LAST:event_sidebar_panelMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1094,12 +1333,13 @@ String s;
     private javax.swing.JPanel PresentCourse;
     private javax.swing.JPanel PresentCourse2;
     private javax.swing.JPanel Results;
-    private javax.swing.JPanel Salary;
     private javax.swing.JPanel SignUp;
     private javax.swing.JPanel StudentPanel;
     private javax.swing.JPanel TeacherPanel;
     private javax.swing.JPanel UpdatelDataPanel;
+    private javax.swing.JPanel attendance;
     private javax.swing.JPanel centrePanel;
+    private javax.swing.JPanel cover;
     private javax.swing.JLabel error_lbl;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -1130,7 +1370,18 @@ String s;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1145,7 +1396,10 @@ String s;
     private javax.swing.JButton login;
     private javax.swing.JTextField login_email;
     private javax.swing.JPasswordField login_pass;
+    private javax.swing.JPanel notice;
     private javax.swing.JCheckBox pass_check;
+    private javax.swing.JPanel routine;
+    private javax.swing.JPanel routine1;
     private javax.swing.JPanel sidebar_admin;
     private javax.swing.JPanel sidebar_panel;
     private javax.swing.JPanel sidebar_student;
@@ -1155,6 +1409,8 @@ String s;
     private javax.swing.JTextField signup_name;
     private javax.swing.JPasswordField signup_pass;
     private javax.swing.JCheckBox signup_pass_check;
+    private javax.swing.JPanel student_notice;
+    private javax.swing.JPanel update_notice;
     // End of variables declaration//GEN-END:variables
 //    private void labelcolor(JLabel label)
 //    {
