@@ -852,7 +852,7 @@ int x=210;
             x=210;
         }
     }//GEN-LAST:event_jLabel3MouseClicked
-
+int i=1,j=1,k=1;
     private void jLabel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseEntered
         // TODO add your handling code here:
 //        labelcolor(jLabel2);
@@ -862,26 +862,39 @@ int x=210;
         // TODO add your handling code here:
 //        resetlabelcolor(jLabel2);
     }//GEN-LAST:event_jLabel3MouseEntered
-
+String s;
     private void sidebar_adminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sidebar_adminMouseClicked
         // TODO add your handling code here:
         onClick(sidebar_admin);
         onLeaveClick(sidebar_student);
         onLeaveClick(sidebar_teacher);
-        
+        s="admin";
+        if(i==1)
+        {
+            SignUp.setVisible(false);
+            Login.setVisible(true);
+            TeacherPanel.setVisible(false);
+            StudentPanel.setVisible(false);
+            AdminPanel.setVisible(false);
+        }
+        else
+        {
         AdminPanel.setVisible(true);
         Login.setVisible(false);
         SignUp.setVisible(false);
         TeacherPanel.setVisible(false);
         StudentPanel.setVisible(false);
+        }
+
     }//GEN-LAST:event_sidebar_adminMouseClicked
-int i=1;
+
     private void sidebar_studentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sidebar_studentMouseClicked
         // TODO add your handling code here:
         onLeaveClick(sidebar_admin);
         onClick(sidebar_student);
         onLeaveClick(sidebar_teacher);
-        if(i==1)
+        s="student";
+        if(j==1)
         {
             
             SignUp.setVisible(true);
@@ -906,12 +919,25 @@ int i=1;
         onLeaveClick(sidebar_admin);
         onLeaveClick(sidebar_student);
         onClick(sidebar_teacher);
+        s="teacher";
         
+        if(k==1)
+        { 
+            SignUp.setVisible(true);
+            Login.setVisible(false);
+            TeacherPanel.setVisible(false);
+            StudentPanel.setVisible(false);
+            AdminPanel.setVisible(false);
+        }
+        else
+        {
         Login.setVisible(false);
         SignUp.setVisible(false);
         TeacherPanel.setVisible(true);
         StudentPanel.setVisible(false);
         AdminPanel.setVisible(false);
+        }
+
     }//GEN-LAST:event_sidebar_teacherMouseClicked
 
     private void pass_checkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pass_checkActionPerformed
@@ -970,12 +996,33 @@ int i=1;
         // TODO add your handling code here:
         if(login_email.getText().equals("hridoy@gmail.com") && login_pass.getText().equals("hridoy"))
         {
+            if(s=="admin")
+            {
+        StudentPanel.setVisible(false);
+        SignUp.setVisible(false);
+        Login.setVisible(false);
+        TeacherPanel.setVisible(false);
+        AdminPanel.setVisible(true);
+        i++;
+            }
+            if(s=="student")
+            {
         StudentPanel.setVisible(true);
         SignUp.setVisible(false);
         Login.setVisible(false);
         TeacherPanel.setVisible(false);
         AdminPanel.setVisible(false);
-        i++;
+        j++;
+            }
+            if(s=="teacher")
+            {
+        StudentPanel.setVisible(false);
+        SignUp.setVisible(false);
+        Login.setVisible(false);
+        TeacherPanel.setVisible(true);
+        AdminPanel.setVisible(false);
+        k++;
+            }
         }
         else
             error_lbl.setVisible(true);
