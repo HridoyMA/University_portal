@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -272,6 +274,11 @@ public class home extends javax.swing.JFrame {
         jButton1.setText("SIGN UP");
         jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         SignUp.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 445, 189, 40));
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1247,7 +1254,7 @@ String s;
             
             try
             {
-                ps=con.prepareStatement("SELECT * FROM user WHERE mail=? AND password=?");
+                ps=con.prepareStatement("SELECT * FROM student_user WHERE mail=? AND password=?");
                 ps.setString(1, login_email.getText());
                 ps.setString(2, String.valueOf(login_pass.getPassword()));
                 ResultSet rs = ps.executeQuery();
@@ -1363,6 +1370,31 @@ String s;
         onLeaveClick(sidebar_student);
         onLeaveClick(sidebar_teacher);
     }//GEN-LAST:event_sidebar_panelMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+            Connection con=MyConnection.getConnection();
+            PreparedStatement ps;
+        try {
+            ps = con.prepareStatement("insert into student_user(name,mail,password,birth)value(?,?,?,?)");
+            
+            ps.setString(1, signup_name.getText());
+            ps.setString(2, signup_email.getText());
+            ps.setString(3, signup_pass.getText());
+            ps.setString(4, signup_birth.getText());
+            
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Record Added");
+            
+            signup_name.setText("");
+            signup_email.setText("");
+            signup_pass.setText("");
+            signup_birth.setText("");
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
