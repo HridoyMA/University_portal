@@ -130,7 +130,9 @@ public class home extends javax.swing.JFrame {
         update_notice = new javax.swing.JPanel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
+        sidebar_data = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -998,6 +1000,10 @@ public class home extends javax.swing.JFrame {
 
         jPanel1.add(centrePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 85, 790, 540));
 
+        sidebar_data.setBackground(new java.awt.Color(16, 24, 32));
+        sidebar_data.setForeground(new java.awt.Color(254, 231, 21));
+        sidebar_data.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/menu.png"))); // NOI18N
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1009,7 +1015,12 @@ public class home extends javax.swing.JFrame {
                 jLabel3MouseEntered(evt);
             }
         });
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 95, -1, -1));
+        sidebar_data.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        jLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/sidepanel_data.png"))); // NOI18N
+        sidebar_data.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 540));
+
+        jPanel1.add(sidebar_data, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 85, 210, 540));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/University-Portal-Top.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 625));
@@ -1052,6 +1063,7 @@ int x=210;
             };th.start();
             x=0;
         }
+                    sidebar_data.setVisible(true);
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
@@ -1079,6 +1091,7 @@ int x=210;
             };th.start();
             x=210;
         }
+                    sidebar_data.setVisible(false);
     }//GEN-LAST:event_jLabel3MouseClicked
 int i=1,j=1,k=1;
     private void jLabel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseEntered
@@ -1445,6 +1458,7 @@ String s;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1464,6 +1478,7 @@ String s;
     private javax.swing.JPanel routine;
     private javax.swing.JPanel routine1;
     private javax.swing.JPanel sidebar_admin;
+    private javax.swing.JPanel sidebar_data;
     private javax.swing.JPanel sidebar_panel;
     private javax.swing.JPanel sidebar_student;
     private javax.swing.JPanel sidebar_teacher;
