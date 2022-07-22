@@ -1242,68 +1242,25 @@ String s;
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
         // TODO add your handling code here:
         
-//        Connection con=MyConnection.getConnection();
-//            PreparedStatement ps;
-//            
-//            try
-//            {
-//                ps=con.prepareStatement("SELECT * FROM user WHERE mail=? AND password=MD5(?)");
-//                ps.setString(1, login_email.getText());
-//                ps.setString(2, String.valueOf(login_pass.getPassword()));
-//                ResultSet rs = ps.executeQuery();
-//                
-//                if(rs.next())
-//                {
+        Connection con=MyConnection.getConnection();
+            PreparedStatement ps;
+            
+            try
+            {
+                ps=con.prepareStatement("SELECT * FROM user WHERE mail=? AND password=?");
+                ps.setString(1, login_email.getText());
+                ps.setString(2, String.valueOf(login_pass.getPassword()));
+                ResultSet rs = ps.executeQuery();
+                
+                if(rs.next())
+                {
 //                    Front_page front=new Front_page();
 //                    front.setVisible(true);
 //                    front.pack();
 //                    front.setLocationRelativeTo(null);
 //                    this.dispose();
                     
-//                                if(s=="admin")
-//            {
-//        StudentPanel.setVisible(false);
-//        SignUp.setVisible(false);
-//        Login.setVisible(false);
-//        TeacherPanel.setVisible(false);
-//        AdminPanel.setVisible(true);
-//        i++;
-//            }
-//            if(s=="student")
-//            {
-//        StudentPanel.setVisible(true);
-//        SignUp.setVisible(false);
-//        Login.setVisible(false);
-//        TeacherPanel.setVisible(false);
-//        AdminPanel.setVisible(false);
-//        j++;
-//            }
-//            if(s=="teacher")
-//            {
-//        StudentPanel.setVisible(false);
-//        SignUp.setVisible(false);
-//        Login.setVisible(false);
-//        TeacherPanel.setVisible(true);
-//        AdminPanel.setVisible(false);
-//        k++;
-//            }
-//                    
-//                }
-//                else
-//                {
-//                     JOptionPane.showMessageDialog(this, "Username and Password Wrong...");
-//
-//                }
-//                
-//            }
-//            catch (SQLException ex) {
-//
-//        }
-        
-        
-        if(login_email.getText().equals("hridoy@gmail.com") && login_pass.getText().equals("hridoy"))
-        {
-            if(s=="admin")
+                                if(s=="admin")
             {
         StudentPanel.setVisible(false);
         SignUp.setVisible(false);
@@ -1330,9 +1287,52 @@ String s;
         AdminPanel.setVisible(false);
         k++;
             }
+                    
+                }
+                else
+                {
+                     JOptionPane.showMessageDialog(this, "Username and Password Wrong...");
+
+                }
+                
+            }
+            catch (SQLException ex) {
+
         }
-        else
-            error_lbl.setVisible(true);
+        
+        
+//        if(login_email.getText().equals("hridoy@gmail.com") && login_pass.getText().equals("hridoy"))
+//        {
+//            if(s=="admin")
+//            {
+//        StudentPanel.setVisible(false);
+//        SignUp.setVisible(false);
+//        Login.setVisible(false);
+//        TeacherPanel.setVisible(false);
+//        AdminPanel.setVisible(true);
+//        i++;
+//            }
+//            if(s=="student")
+//            {
+//        StudentPanel.setVisible(true);
+//        SignUp.setVisible(false);
+//        Login.setVisible(false);
+//        TeacherPanel.setVisible(false);
+//        AdminPanel.setVisible(false);
+//        j++;
+//            }
+//            if(s=="teacher")
+//            {
+//        StudentPanel.setVisible(false);
+//        SignUp.setVisible(false);
+//        Login.setVisible(false);
+//        TeacherPanel.setVisible(true);
+//        AdminPanel.setVisible(false);
+//        k++;
+//            }
+//        }
+//        else
+//            error_lbl.setVisible(true);
     }//GEN-LAST:event_loginActionPerformed
 
     private void jLabel34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel34MouseClicked
