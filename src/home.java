@@ -1,5 +1,9 @@
 
 import java.awt.Color;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -221,20 +225,19 @@ public class home extends javax.swing.JFrame {
         centrePanel.setLayout(new java.awt.CardLayout());
 
         jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/cover.png"))); // NOI18N
-        jLabel45.setPreferredSize(new java.awt.Dimension(790, 540));
 
         javax.swing.GroupLayout coverLayout = new javax.swing.GroupLayout(cover);
         cover.setLayout(coverLayout);
         coverLayout.setHorizontalGroup(
             coverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(coverLayout.createSequentialGroup()
-                .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel45)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         coverLayout.setVerticalGroup(
             coverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(coverLayout.createSequentialGroup()
-                .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel45)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -1225,6 +1228,66 @@ String s;
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
         // TODO add your handling code here:
+        
+//        Connection con=MyConnection.getConnection();
+//            PreparedStatement ps;
+//            
+//            try
+//            {
+//                ps=con.prepareStatement("SELECT * FROM user WHERE mail=? AND password=MD5(?)");
+//                ps.setString(1, login_email.getText());
+//                ps.setString(2, String.valueOf(login_pass.getPassword()));
+//                ResultSet rs = ps.executeQuery();
+//                
+//                if(rs.next())
+//                {
+//                    Front_page front=new Front_page();
+//                    front.setVisible(true);
+//                    front.pack();
+//                    front.setLocationRelativeTo(null);
+//                    this.dispose();
+                    
+//                                if(s=="admin")
+//            {
+//        StudentPanel.setVisible(false);
+//        SignUp.setVisible(false);
+//        Login.setVisible(false);
+//        TeacherPanel.setVisible(false);
+//        AdminPanel.setVisible(true);
+//        i++;
+//            }
+//            if(s=="student")
+//            {
+//        StudentPanel.setVisible(true);
+//        SignUp.setVisible(false);
+//        Login.setVisible(false);
+//        TeacherPanel.setVisible(false);
+//        AdminPanel.setVisible(false);
+//        j++;
+//            }
+//            if(s=="teacher")
+//            {
+//        StudentPanel.setVisible(false);
+//        SignUp.setVisible(false);
+//        Login.setVisible(false);
+//        TeacherPanel.setVisible(true);
+//        AdminPanel.setVisible(false);
+//        k++;
+//            }
+//                    
+//                }
+//                else
+//                {
+//                     JOptionPane.showMessageDialog(this, "Username and Password Wrong...");
+//
+//                }
+//                
+//            }
+//            catch (SQLException ex) {
+//
+//        }
+        
+        
         if(login_email.getText().equals("hridoy@gmail.com") && login_pass.getText().equals("hridoy"))
         {
             if(s=="admin")
