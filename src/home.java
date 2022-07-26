@@ -5,12 +5,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSetMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.MessageFormat;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
@@ -236,6 +238,7 @@ public class home extends javax.swing.JFrame {
         jLabel71 = new javax.swing.JLabel();
         txtcourse1 = new javax.swing.JComboBox<>();
         jLabel72 = new javax.swing.JLabel();
+        jbtnexit1 = new javax.swing.JButton();
         update = new javax.swing.JPanel();
         studentup = new javax.swing.JPanel();
         jLabel55 = new javax.swing.JLabel();
@@ -1484,6 +1487,7 @@ public class home extends javax.swing.JFrame {
         jLabel67.setText("Blood Group");
         studentdataupdate.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
 
+        txtblood1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtblood1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Group", "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-" }));
         txtblood1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1516,7 +1520,7 @@ public class home extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        studentdataupdate.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, -1, -1));
+        studentdataupdate.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 350, -1, -1));
 
         jButton6.setBackground(new java.awt.Color(153, 0, 0));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1528,7 +1532,7 @@ public class home extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        studentdataupdate.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 480, -1, -1));
+        studentdataupdate.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 470, -1, -1));
 
         jbtnupdate.setBackground(new java.awt.Color(153, 0, 0));
         jbtnupdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1540,7 +1544,7 @@ public class home extends javax.swing.JFrame {
                 jbtnupdateActionPerformed(evt);
             }
         });
-        studentdataupdate.add(jbtnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 440, -1, -1));
+        studentdataupdate.add(jbtnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 390, -1, -1));
 
         jTable1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -1578,13 +1582,26 @@ public class home extends javax.swing.JFrame {
         jLabel71.setText("Nationality");
         studentdataupdate.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
 
+        txtcourse1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtcourse1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Course", "CSE", "EEE", "BBA", " ", " " }));
-        studentdataupdate.add(txtcourse1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, 260, 20));
+        studentdataupdate.add(txtcourse1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, 260, 30));
 
         jLabel72.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel72.setForeground(new java.awt.Color(255, 255, 255));
         jLabel72.setText("Course");
         studentdataupdate.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 130, -1));
+
+        jbtnexit1.setBackground(new java.awt.Color(153, 0, 0));
+        jbtnexit1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jbtnexit1.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnexit1.setText("PRINT");
+        jbtnexit1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbtnexit1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnexit1ActionPerformed(evt);
+            }
+        });
+        studentdataupdate.add(jbtnexit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 430, -1, -1));
 
         centrePanel.add(studentdataupdate, "card10");
 
@@ -2166,10 +2183,12 @@ int x = 210;
                 String mother_name = rs.getString("mother_name");
                 String mobile = rs.getString("mobile");
                 String email = rs.getString("email");
+                String nationality = rs.getString("nationality");
                 String blood_group = rs.getString("blood_group");
                 String address = rs.getString("address");
+                String course = rs.getString("course");
 
-                String tbData[]={id,name,father_name,mother_name,mobile,email,blood_group,address};
+                String tbData[]={id,name,father_name,mother_name,mobile,email,nationality,blood_group,address,course};
                 DefaultTableModel RecordTable = (DefaultTableModel)jTable1.getModel();
                 RecordTable.addRow(tbData);
             }
@@ -2212,12 +2231,12 @@ int x = 210;
         StudentPanel.setVisible(false);
         AdminPanel.setVisible(false);
         addstudent.setVisible(false);
-        studentdataupdate.setVisible(false);
+        studentdataupdate.setVisible(true);
         update.setVisible(false);
-        Student_update obj=new Student_update();
-        obj.setVisible(true);
-        obj.pack();
-        obj.setLocationRelativeTo(null);
+//        Student_update obj=new Student_update();
+//        obj.setVisible(true);
+//        obj.pack();
+//        obj.setLocationRelativeTo(null);
     }//GEN-LAST:event_studentupMouseClicked
 
     private void teacherupMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_teacherupMouseClicked
@@ -2250,17 +2269,17 @@ int x = 210;
                             sqlConn = MyConnection.getConnection();
 //        PreparedStatement pst;
 
-            pst = sqlConn.prepareStatement("update cse set name=?,father_name=?,mother_name=?,mobile=?,email=?,nationality=?,blood_group=?,address=?,course=? where id=?");
+            pst = sqlConn.prepareStatement("update add_student set name=?,father_name=?,mother_name=?,mobile=?,email=?,nationality=?,blood_group=?,address=?,course=? where id=?");
 
-            pst.setString(1, txtname.getText());
-            pst.setString(2, txtfather.getText());
-            pst.setString(3, txtmother.getText());
-            pst.setString(4, txtphone.getText());
-            pst.setString(5, txtemail.getText());
-            pst.setString(6, txtnation.getText());
-            pst.setString(7, (String) txtblood.getSelectedItem());
-            pst.setString(8, txtaddress.getText());
-            pst.setString(9, (String) txtcourse.getSelectedItem());
+            pst.setString(1, txtname1.getText());
+            pst.setString(2, txtfather1.getText());
+            pst.setString(3, txtmother1.getText());
+            pst.setString(4, txtphone1.getText());
+            pst.setString(5, txtemail1.getText());
+            pst.setString(6, txtnation1.getText());
+            pst.setString(7, (String) txtblood1.getSelectedItem());
+            pst.setString(8, txtaddress1.getText());
+            pst.setString(9, (String) txtcourse1.getSelectedItem());
             pst.setInt(10, id);
 
             pst.executeUpdate();
@@ -2276,20 +2295,49 @@ int x = 210;
         DefaultTableModel RecordTable = (DefaultTableModel)jTable1.getModel();
         int SelectedRows = jTable1.getSelectedRow();
 
-        txtname.setText(RecordTable.getValueAt(SelectedRows, 1).toString());
-        txtfather.setText(RecordTable.getValueAt(SelectedRows, 2).toString());
-        txtmother.setText(RecordTable.getValueAt(SelectedRows, 3).toString());
-        txtphone.setText(RecordTable.getValueAt(SelectedRows, 4).toString());
-        txtemail.setText(RecordTable.getValueAt(SelectedRows, 5).toString());
-        txtnation.setText(RecordTable.getValueAt(SelectedRows, 6).toString());
+        txtname1.setText(RecordTable.getValueAt(SelectedRows, 1).toString());
+        txtfather1.setText(RecordTable.getValueAt(SelectedRows, 2).toString());
+        txtmother1.setText(RecordTable.getValueAt(SelectedRows, 3).toString());
+        txtphone1.setText(RecordTable.getValueAt(SelectedRows, 4).toString());
+        txtemail1.setText(RecordTable.getValueAt(SelectedRows, 5).toString());
+        txtnation1.setText(RecordTable.getValueAt(SelectedRows, 6).toString());
         //txtblood.setText(RecordTable.getValueAt(SelectedRows, 7).toString());
-        txtaddress.setText(RecordTable.getValueAt(SelectedRows, 8).toString());
+        txtaddress1.setText(RecordTable.getValueAt(SelectedRows, 8).toString());
         //txtcourse.setText(RecordTable.getValueAt(SelectedRows, 9).toString());
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void txtnation1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnation1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtnation1ActionPerformed
+
+                private void print()
+    {
+        MessageFormat header = new MessageFormat("BBA DEPARTMENT");
+        MessageFormat footer = new MessageFormat("Page{0,number,integer}");
+        
+        try
+        {
+            jTable1.print(JTable.PrintMode.NORMAL,header,footer);
+        }
+        catch(java.awt.print.PrinterException e)
+        {
+            System.err.format("No Printer fount", e.getMessage());
+        }
+    }
+    private void jbtnexit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnexit1ActionPerformed
+        // TODO add your handling code here:
+        MessageFormat header = new MessageFormat("BBA DEPARTMENT");
+        MessageFormat footer = new MessageFormat("Page{0,number,integer}");
+
+        try
+        {
+            jTable1.print(JTable.PrintMode.NORMAL,header,footer);
+        }
+        catch(java.awt.print.PrinterException e)
+        {
+            System.err.format("No Printer fount", e.getMessage());
+        }
+    }//GEN-LAST:event_jbtnexit1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2435,6 +2483,7 @@ int x = 210;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JTable jTable1;
     private javax.swing.JButton jbtnadd;
+    private javax.swing.JButton jbtnexit1;
     private javax.swing.JButton jbtnupdate;
     private javax.swing.JButton login;
     private javax.swing.JTextField login_email;
